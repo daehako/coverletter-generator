@@ -59,3 +59,10 @@ pydantic_core._pydantic_core.ValidationError: 1 validation error for AIConfigRun
 [WARNING] 2024-05-14 23:50:09,693 server_utils.py:280: Failed to load parsers module: File does not exist: /Users/daehako/Desktop/cover-letter/aiconfig_model_registry.py
 [INFO] 2024-05-14 23:50:09,693 server.py:99: Initialized server state
 [INFO] 2024-05-14 23:50:09,693 server.py:104: Running in ServerMode.PROD mode
+[INFO] 2024-05-15 19:04:43,523 server.py:72: Edit config: {"server_port":8003,"log_level":"INFO","server_mode":"PROD","parsers_module_path":"aiconfig_model_registry.py","env_file_path":null}
+[INFO] 2024-05-15 19:04:43,525 server.py:73: Starting server on http://localhost:8003
+[INFO] 2024-05-15 19:04:43,525 server_utils.py:298: Initializing server state for 'edit' command
+[WARNING] 2024-05-15 19:04:43,526 server_utils.py:280: Failed to load parsers module: File does not exist: /Users/brooklynbowers/Desktop/coverletter-generator/aiconfig_model_registry.py
+[WARNING] 2024-05-15 19:04:43,526 server_utils.py:308: No .env file path provided: 'None'
+[INFO] 2024-05-15 19:04:43,526 server.py:99: Initialized server state
+[INFO] 2024-05-15 19:04:43,526 server.py:104: Running in ServerMode.PROD mode
