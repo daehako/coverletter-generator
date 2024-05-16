@@ -79,7 +79,8 @@ def main():
         submit_button = st.form_submit_button(label='Generate Cover Letter')
 
     if submit_button and resume and job_posting and position_name:
-        cover_letter = generate_cover_letter(company_name, position_name, resume, job_posting, tone)
+        with st.spinner('Generating your cover letter... Please wait'):
+            cover_letter = generate_cover_letter(company_name, position_name, resume, job_posting, tone)
         if cover_letter:
             st.text_area("Generated Cover Letter", value=cover_letter, height=300)
         else:
