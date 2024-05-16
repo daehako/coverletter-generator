@@ -123,7 +123,7 @@ from openai import OpenAI
 OPENAI_API_KEY = ""
 
 # Setup Gemini API key
-gemini_api_key = 'AIzaSyDs4EojzeT1Awkv7C_Aikm52158sr6ouZI'
+gemini_api_key = ''
 
 client = OpenAI(api_key=OPENAI_API_KEY)
 
