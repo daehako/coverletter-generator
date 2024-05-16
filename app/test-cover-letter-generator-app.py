@@ -29,11 +29,11 @@
 # def send_order_to_Gemini(response: str) -> str:
 #     ""
 #     # Initialize the Gemini API (configure your API key as shown in the search results)
-#     genai.configure(api_key="AIzaSyDs4EojzeT1Awkv7C_Aikm52158sr6ouZI")
+#     genai.configure(api_key="")
 #     gemini_base_url = 'https://api.gemini.com/v1/order/new'
 #     headers = {
 #         "Content-Type": "application/json",
-#         "Authorization": "AIzaSyDs4EojzeT1Awkv7C_Aikm52158sr6ouZI"
+#         "Authorization": """
 #     }
 #     data = {
 #         "request": "/v1/order/new"
@@ -61,7 +61,7 @@
 # #    return '\n'.join(full_text)
 
 # def generate_cover_letter(company_name, position_name, resume, job_posting, tone):
-#     openai_api_key = config.get("sk-proj-MV44DHn6oToneIcOGnUtT3BlbkFJpPJPTNpivhyH3gV2Nid9")
+#     openai_api_key = config.get("")
 #     openai.api_key = openai_api_key
     
 #     prompt = f"I am a job seeker and I need your help to generate a cover letter. Here are the company name: {company_name}, the position title: {position_name}, my resume: {resume}, job description: {job_posting}, the tone of my cover letter: {tone}."
