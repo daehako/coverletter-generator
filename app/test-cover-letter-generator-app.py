@@ -7,12 +7,6 @@
 # #Load AIConfig
 # config = AIConfig("./app/aiconfig.json")
 
-# # Your OpenAI API key (replace with your actual key)
-# OPENAI_API_KEY = "sk-proj-MV44DHn6oToneIcOGnUtT3BlbkFJpPJPTNpivhyH3gV2Nid9"
-
-# # Setup Gemini API key
-# gemini_api_key = 'AIzaSyDs4EojzeT1Awkv7C_Aikm52158sr6ouZI'
-
 # # Initialize the OpenAI API client
 # openai.api_key = OPENAI_API_KEY
 
