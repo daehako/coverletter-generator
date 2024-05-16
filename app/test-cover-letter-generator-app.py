@@ -120,7 +120,7 @@ import requests
 from openai import OpenAI
 
 # Your OpenAI API key (replace with your actual key)
-OPENAI_API_KEY = "sk-proj-V12cFQqr1QCkYJf8FpN8T3BlbkFJSLi8AgtdYG8QtlV73SHp"
+OPENAI_API_KEY = ""
 
 # Setup Gemini API key
 gemini_api_key = 'AIzaSyDs4EojzeT1Awkv7C_Aikm52158sr6ouZI'
