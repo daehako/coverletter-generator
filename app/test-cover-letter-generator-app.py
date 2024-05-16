@@ -2,6 +2,8 @@ import google.generativeai as genai
 import streamlit as st
 import requests
 from openai import OpenAI
+import chromadb
+import numpy as np
 
 # Your OpenAI API key (replace with your actual key)
 OPENAI_API_KEY = ""
@@ -10,6 +12,24 @@ OPENAI_API_KEY = ""
 gemini_api_key = ''
 
 client = OpenAI(api_key=OPENAI_API_KEY)
+
+
+# Chromadb functions
+def run_query(query, collection_name, k):
+    chroma_client = chromadb.PersistentClient(path="app/chroma.db")
+    collection = chroma_client.get_collection(name=collection_name)
+    data = retrieve_data(collection, query, k)
+    serialized_data = serialize_retrieved_data(data)
+    return serialized_data
+
+def retrieve_data(collection, query, k):
+    data = collection.query(query_texts=[query], n_results=k)
+    return data
+
+def serialize_retrieved_data(data):
+    np_documents = np.array(data["documents"]).flatten()
+    out = "\n".join(np_documents)
+    return out
 
 
 # Function to generate a response using OpenAI
@@ -53,6 +73,13 @@ def send_order_to_Gemini(response: str) -> str:
 def generate_cover_letter(company_name, position_name, resume, job_posting, tone):
     
     prompt = f"I am a job seeker and I need your help to generate a cover letter. Here are the company name: {company_name}, the position title: {position_name}, my resume: {resume}, job description: {job_posting}, the tone of my cover letter: {tone}."
+    
+    # Adjust 3rd parameter to control how many results are returned(how many nearest neighbors)
+    context = run_query(prompt, "cover_letter_guidelines", 2)
+
+    st.write("CONTEXT USED", context)
+
+    prompt += f"\n And this here is a set of guidelines to follow while creating the cover letter: {context}"
     
     # Call to the ChatGPT model 
     response = client.chat.completions.create(
