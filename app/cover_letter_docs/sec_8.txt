@@ -1,0 +1,27 @@
+While reading your cover letter, the recruiter shouldn’t have to look far to find who wrote it. Your document should include a basic heading with the following information:
+
+- Full name
+- Pronouns (optional)
+- Location (optional)
+- Email address
+- Phone number (optional)
+- Relevant links, such as your LinkedIn profile, portfolio, or personal website (optional)
+
+You can pull this information directly from your CV. Put it together, and it will look something like this:
+
+John Doe
+He/him
+San Francisco, California
+johndoe@mypersonalemail.com
+myportfoliosite.com
+
+Alternatively, if the posting asks you to submit your cover letter in the body of an email, you can include this information in your signature. For example:
+
+Warm regards,
+
+Jane Doe
+She/her
+Anywhere, Anystate
+janedoe@mypersonalemail.com
+555-123-4567
+myportfoliosite.com
